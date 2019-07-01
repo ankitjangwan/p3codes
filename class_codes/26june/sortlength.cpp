@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+
+using namespace std;
+
+bool compare(string &s1,string &s2){
+	return s1<s2;
+}
+
+int main(){
+	int n;
+	cin>>n;
+	string arr[n];
+	for (int i = 0; i < n; ++i)
+	{
+		cin>>arr[i];
+	}
+	sort(arr,arr+n,compare);
+	for (int i = 0; i < n; ++i)
+	{
+		cout<<arr[i]<<' ';
+	}
+	return 0;
+}
